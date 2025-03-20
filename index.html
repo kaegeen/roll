@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roll Machine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white flex flex-col items-center h-screen justify-center">
+    <!-- Roll Machine Section -->
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
+        <h1 class="text-2xl font-bold mb-4">Roll Machine</h1>
+        <p class="mb-4">Click the button to roll a number!</p>
+        <div id="rollResult" class="text-4xl font-bold mb-4">🎲</div>
+        <button onclick="rollDice()" class="bg-blue-500 px-6 py-2 text-white rounded hover:bg-blue-700">Roll</button>
+    </div>
+
+    <script>
+        function rollDice() {
+            const roll = Math.floor(Math.random() * 6) + 1; // Rolling a 6-sided dice
+            document.getElementById("rollResult").innerText = `🎲 ${roll}`;
+        }
+    </script>
+</body>
+</html>
